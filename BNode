@@ -1,0 +1,14 @@
+//Purpuse of the file is Universal Node for a Tree
+
+package Useful;
+
+public class BNode {
+
+    public int data;
+    public BNode left,right;
+
+    public BNode(int data) {
+        this.data = data;
+        left=right=null;
+    }
+}
