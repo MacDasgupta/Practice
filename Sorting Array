@@ -1,0 +1,42 @@
+Arrays.sort  -- Ascending
+
+String[] s = { "sort", "string", "array" };
+Arrays.sort(s);
+System.out.println(Arrays.toString(s));		// [array, sort, string]
+
+String[] s = { "sort", "string", "array" };
+Arrays.sort(s, Comparator.naturalOrder());
+System.out.println(Arrays.toString(s));		// [array, sort, string]
+
+
+Descending Order -- Comparator
+
+String[] s = { "sort", "string", "array" };
+Arrays.sort(s, Comparator.reverseOrder());	// or Collections.reverseOrder())
+System.out.println(Arrays.toString(s));   	// [string, sort, array]
+
+
+String[] s = { "sort", "string", "array" };
+Arrays.sort(s, Comparator.reverseOrder());	// or Collections.reverseOrder())
+System.out.println(Arrays.toString(s));   	// [string, sort, array]
+
+
+Parallel Sort(Using multi Threading) - Java 8
+
+String[] s = { "sort", "string", "array" };
+Arrays.parallelSort(s);
+System.out.println(Arrays.toString(s));		// [array, sort, string]
+
+Streams
+  Ascending
+  
+  String[] s = { "sort", "string", "array" };
+s = Arrays.stream(s).sorted().toArray(String[]::new);  // or Stream.of()
+System.out.println(Arrays.toString(s)); 			   // [array, sort, string]
+
+  Descending 
+  
+  String[] s = { "sort", "string", "array" };
+s = Arrays.stream(s).sorted(Collections.reverseOrder())
+			.toArray(String[]::new);
+System.out.println(Arrays.toString(s));		// [string, sort, array]
